@@ -1,0 +1,63 @@
+Lab1. 
+
+Part 1: Sprites 
+	Add two or more images to your project
+		- Use the Monogame Content Pipeline	
+	Load and Draw the images using the Sprite Class
+
+Part 2: 
+	Add a Font Style to your project 	
+		- Use the Monogame Content Pipeline	
+	Display the location of each Sprite on Screen. 
+		Restrict the Decimal point to 1 place
+		https://docs.microsoft.com/en-us/dotnet/standard/base-types/formatting-types
+Part 3: 
+	Create a 'DrawingTools' class 
+	This class will be public & static
+
+	Add and implement the following method: 
+	public static void DrawRectangle(SpriteBatch spriteBatch, float width, Color color, Rectangle Rec)
+		Hint: Use the LineDrawer.DrawLine Method
+        
+
+Part 4: 
+	Create a "Grid2D" Class
+	This class will be public
+
+	You will draw a grid on the screen using the LineDrawer class provided to you. 
+
+	You will have a Origin vector2 member. 
+		your grid will be drawn using this point as the origin on the screen. 
+
+	You will have 3 Color members, these will be your drawing colors
+	AxisColor , Default White
+	LineColor , Default Dark Gray
+	DivisionColor, Default Yellow
+
+	3 Floats for width for drawing 
+	AxisWidth, Default 3
+	LineWidth, Default 1, 
+	DivisionWidth, Default 2
+
+	Two Booleans
+	IsDrawingAxis, Default true
+	isDrawingDivsions, Default true
+	isDrawingOrigin
+
+	GridSize, Float member 
+		The distance between Lines
+		GridSize should never go below the largest Line Width
+	DivisionCount
+		On what lines over from the Axis should the Division lines should be drawn. 
+
+	Create an instance of your new Grid2D class
+	Set the center point at the center of the Monogame window. 
+
+
+Part 5:	
+	Add Controls demostrating using Keyboard, Mouse, Gamepad 
+
+Required: 	
+	Use the MouseWheel to enlarge and shrink the gridsize, 
+	Use the Middle Mouse button to place the grid origin at the current mouse location 
+	
