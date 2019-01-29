@@ -1,0 +1,50 @@
+AGGP 247
+Lab 2
+
+* Add to Grid2D the following Methods: 
+public Vector2 Grid2ScreenPoint(Vector2) 
+	Parm:   Vector2 in Grid Space
+	return: Vector2 in Screen Space 
+
+public void DrawSprite(spritebatch, Sprite)
+	Parm:  Spritebatch to draw with, 
+		Sprite reference with position in Grid Space
+
+public void LineSprite(spritebatch, Line)	
+	Parms: Spritebatch to draw with,
+		Line with positions in Grid Space
+
+* Add to DrawingTools:
+
+public static Vector2 CircleRadiusPoint(Vector2 Origin, float angle, float radius) 
+
+
+public static void DrawCircle(SpriteBatch spriteBatch, float width, Color color, Vector2 Position, float Radius, int Sides)
+Draws a Circle, Local Center of the circle is 0,0
+        
+public static LineObject GenerateCircle(float width, Color color, float Radius, int Sides)
+Generates a Line Object of a Circle, Local Center of the circle is 0,0
+
+
+public static Vector2 EllipseRadiusPoint(Vector2 Origin, float angle, float Axis) 
+
+public static void DrawEllipse(SpriteBatch spriteBatch, float width, Color color, Vector2 Position, Vector2 Axis, int Sides)
+        
+public static LineObject GenerateEllipse(float width, Color color, Vector2 Axis, int Sides)
+Generates a Line Object of a Ellipse, 
+Local Center of the circle is 0,0.
+Axis Refers to the minor and major axis of the Ellipse for the X and Y Axis. 
+
+* Create an Ellipse Class
+The purpose of this class is to collect all of the information for an Ellipse in an stucture. 
+Use the following public members
+   	public Vector2 Position = Vector2.Zero;	
+	public Vector2 Center = Vector2.Zero;
+        public Vector2 Axis = Vector2.One;
+        public float Roation = 0;
+        public int Sides = 32;
+        public float Width = 2.0f;
+        public Color color = Color.White;
+
+* Create a Circle Class
+	This will Inherit from your Ellipse class. 
