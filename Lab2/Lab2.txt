@@ -10,9 +10,13 @@ public void DrawSprite(spritebatch, Sprite)
 	Parm:  Spritebatch to draw with, 
 		Sprite reference with position in Grid Space
 
-public void LineSprite(spritebatch, Line)	
+public void DrawLine(spritebatch, Line)	
 	Parms: Spritebatch to draw with,
 		Line with positions in Grid Space
+
+public void DrawLineObject(spritebatch, LineObject)	
+	Parms: Spritebatch to draw with,
+		LineObject with positions in Grid Space
 
 * Add to DrawingTools:
 
@@ -20,20 +24,30 @@ public static Vector2 CircleRadiusPoint(Vector2 Origin, float angle, float radiu
 
 
 public static void DrawCircle(SpriteBatch spriteBatch, float width, Color color, Vector2 Position, float Radius, int Sides)
-Draws a Circle, Local Center of the circle is 0,0
+Draws a Circle, 
+Center of the circle is Position
+If Sides < 3, make it something reasonable.
         
 public static LineObject GenerateCircle(float width, Color color, float Radius, int Sides)
-Generates a Line Object of a Circle, Local Center of the circle is 0,0
+Generates a Line Object of a Circle
+Local Center of the circle is 0,0
+If Sides < 3, make it something reasonable. 
+
 
 
 public static Vector2 EllipseRadiusPoint(Vector2 Origin, float angle, float Axis) 
 
 public static void DrawEllipse(SpriteBatch spriteBatch, float width, Color color, Vector2 Position, Vector2 Axis, int Sides)
+Draws an Ellipse, 
+Center of the Ellipse is Position
+If Sides < 3, make it something reasonable.
         
 public static LineObject GenerateEllipse(float width, Color color, Vector2 Axis, int Sides)
 Generates a Line Object of a Ellipse, 
 Local Center of the circle is 0,0.
+If Sides < 3, make it something reasonable. 
 Axis Refers to the minor and major axis of the Ellipse for the X and Y Axis. 
+
 
 * Create an Ellipse Class
 The purpose of this class is to collect all of the information for an Ellipse in an stucture. 
@@ -46,5 +60,8 @@ Use the following public members
         public float Width = 2.0f;
         public Color color = Color.White;
 
+Create Constructors & Draw Methods
+
 * Create a Circle Class
 	This will Inherit from your Ellipse class. 
+Create Constructors, but Leverage the Draw method 

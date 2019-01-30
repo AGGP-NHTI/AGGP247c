@@ -14,7 +14,7 @@ namespace LineDraw
 
         public LineObject()
         {
-            Initalize(); 
+            Initalize();
         }
 
         public virtual void Initalize()
@@ -23,7 +23,7 @@ namespace LineDraw
 
         public void Add(Line NewLine)
         {
-            Lines.Add(NewLine); 
+            Lines.Add(NewLine);
         }
 
         public void UpdateTranslations(Vector2 location, float roation, Vector2 scale)
@@ -39,100 +39,11 @@ namespace LineDraw
             {
                 for (int i = 0; i < Lines.Count; i++)
                 {
-                    Lines[i].Draw(spriteBatch, Location, Roation, Scale);
-                }
-            }  
-        }
-
-        // these methods ALTER the object
-        public void ScaleLocal(float scale)
-        {
-            if (Lines.Count != 0)
-            {
-                for (int i = 0; i < Lines.Count; i++)
-                {
-                    Lines[i].startPoint = Lines[i].startPoint * scale;
-                    Lines[i].endPoint = Lines[i].endPoint * scale; 
-                }
-            }  
-        }
-
-        public void ScaleLocal(float scaleX, float scaleY)
-        {
-            if (Lines.Count != 0)
-            {
-                for (int i = 0; i < Lines.Count; i++)
-                {
-                    Lines[i].startPoint.X = Lines[i].startPoint.X * scaleX;
-                    Lines[i].startPoint.Y = Lines[i].startPoint.Y * scaleY;
-                    Lines[i].endPoint.X = Lines[i].endPoint.X * scaleX;
-                    Lines[i].endPoint.Y = Lines[i].endPoint.Y * scaleY;
+                    Lines[i].Draw(spriteBatch, Location);
                 }
             }
         }
-
-        public void ScaleLocal(Vector2 scale)
-        {
-            if (Lines.Count != 0)
-            {
-                for (int i = 0; i < Lines.Count; i++)
-                {
-                    Lines[i].startPoint = Lines[i].startPoint * scale;
-                    Lines[i].endPoint = Lines[i].endPoint * scale;
-                }
-            }
-        }
-
-        public void TranslateLocal(float X, float Y)
-        {
-             TranslateLocal(new Vector2(X, Y)); 
-        }
-
-        public void TranslateLocal(Vector2 translate)
-        {
-            if (Lines.Count != 0)
-            {
-                for (int i = 0; i < Lines.Count; i++)
-                {
-                    Lines[i].startPoint = Lines[i].startPoint - translate;
-                    Lines[i].endPoint = Lines[i].endPoint - translate;
-                }
-            }
-        }
-
-        public void RotateLocal(float angle)
-        {
-            if (Lines.Count != 0)
-            {
-                for (int i = 0; i < Lines.Count; i++)
-                {
-                    Lines[i].startPoint = LinePrimatives.RotatePoint(Vector2.Zero, angle, Lines[i].startPoint);
-                    Lines[i].endPoint = LinePrimatives.RotatePoint(Vector2.Zero, angle, Lines[i].endPoint);
-                }
-            }
-        }
-
-        public void LineWidthLocal(float LineWidth)
-        {
-            if (Lines.Count != 0)
-            {
-                for (int i = 0; i < Lines.Count; i++)
-                {
-                    Lines[i].width = LineWidth;  
-                }
-            }
-        }
-
-        public void LineColorLocal(Color lineColor)
-        {
-            if (Lines.Count != 0)
-            {
-                for (int i = 0; i < Lines.Count; i++)
-                {
-                    Lines[i].color = lineColor;
-                }
-            }
-        }
-
     }
 }
+
+       
