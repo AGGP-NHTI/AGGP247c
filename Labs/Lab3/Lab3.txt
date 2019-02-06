@@ -7,13 +7,27 @@ This boolean will be optional and will default to value of true.
 https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments
 
 Here is what your method signatures will look like after you are done: 
-** public Vector2 Grid2ScreenPoint(Vector2,bool [= true]) 
-** public void DrawSprite(spritebatch, Sprite, bool [= true])
-** public void DrawLine(spritebatch, Line, bool [= true])	
-** public void DrawLineObject(spritebatch, LineObject, bool [= true])	
+** public Vector2 Grid2ScreenPoint(Vector2,bool [= true]) 	
 
 
 * Add the following methods to Grid2D
+
+        public void DrawLine(SpriteBatch sb, Line line, Vector2? location = null, bool DrawinGridScale = true)
+        {
+            Vector2 drawlocation = Vector2.Zero; 
+            if (location != null) { drawlocation = location.Value; }
+
+            LineDrawer.DrawLine(sb, line.width, line.color, Grid2ScreenPoint(drawlocation + line.startPoint, DrawinGridScale), Grid2ScreenPoint(drawlocation + line.endPoint, DrawinGridScale)); 
+        }
+
+        public void DrawLineObject(SpriteBatch sb, LineObject lineObj, bool DrawinGridScale = true)
+        {
+            foreach (Line line in lineObj.Lines)
+            {
+               DrawLine(sb, line, lineObj.Location, DrawinGridScale);
+            }
+        }
+
 
 public float ScaleGrid2Screen(float value)
 {
@@ -43,8 +57,8 @@ don't forget to convert from radians
 
 ** public static Vector2 RotatePoint(Vector2 Center, float angle, Vector2 pointIN)
 ===============
- xnew = point.X * cos(angle) - point.Y(angle) * sin;
- ynew = point.X * sin(angle) + point.Y(angle) * cos;
+ xnew = point.X * cos(angle) - point.Y * sin(angle);
+ ynew = point.X * sin(angle) + point.Y * cos(angle);
 
 If you need a review on rotating a point. 
 https://www.khanacademy.org/partner-content/pixar/sets/rotation/a/rotation-lesson-brief

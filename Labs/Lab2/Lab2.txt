@@ -6,10 +6,6 @@ public Vector2 Grid2ScreenPoint(Vector2)
 	Parm:   Vector2 in Grid Space
 	return: Vector2 in Screen Space 
 
-public void DrawSprite(spritebatch, Sprite)
-	Parm:  Spritebatch to draw with, 
-		Sprite reference with position in Grid Space
-
 public void DrawLine(spritebatch, Line)	
 	Parms: Spritebatch to draw with,
 		Line with positions in Grid Space
@@ -35,7 +31,7 @@ If Sides < 3, make it something reasonable.
 
 
 
-public static Vector2 EllipseRadiusPoint(Vector2 Origin, float angle, float Axis) 
+public static Vector2 EllipseRadiusPoint(Vector2 Origin, float angle, Vector2 Axis) 
 
 public static void DrawEllipse(SpriteBatch spriteBatch, float width, Color color, Vector2 Position, Vector2 Axis, int Sides)
 Draws an Ellipse, 
