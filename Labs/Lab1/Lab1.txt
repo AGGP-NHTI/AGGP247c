@@ -1,4 +1,4 @@
-Lab1. 
+Lab1 
 
 Part 1: Sprites 
 	Add two or more images to your project
@@ -19,56 +19,12 @@ Part 3:
 	public static void DrawRectangle(SpriteBatch spriteBatch, float width, Color color, Rectangle Rec)
 		Hint: Use the LineDrawer.DrawLine Method
         
-	Test this method in your project. 
 Part 4: 
-	Create a "Grid2D" Class
-	This class will be public
 
-	MEMBERS: 
-	You will have a Origin vector2 member. 
-		your grid will be drawn using this point as the origin on the screen. 
-
-	You will have 3 Color members, these will be your drawing colors
-	AxisColor , Default White
-	LineColor , Default Dark Gray
-	DivisionColor, Default Yellow
-
-	3 Floats for width for drawing 
-	AxisWidth, Default 3
-	LineWidth, Default 1, 
-	DivisionWidth, Default 2
-
-	Two Booleans
-	IsDrawingAxis, Default true
-	isDrawingDivsions, Default true
-	isDrawingOrigin,  Default false
-
-	GridSize, Float, default 10f
-		The distance between Lines
-		GridSize should never go below the largest Line Width
-	DivisionCount, default 5
-		On what lines over from the Axis should the Division lines should be drawn. 
-	
-	ScreenSize
-		Vector2 that holds the size screen information	
-		Initalize this in your constructors. 	
-
-	METHODS
-	Constructors
-
-	public void Draw(Spritebatch)
-		Draws a grid across the entire screen 
-		Use the LineDrawer class provided to you to draw lines
-
-
-	Create an instance of your new Grid2D class
-	Set the center point at the center of the Monogame window. 
-
-
-Part 5:	
 	Add Controls demostrating using Keyboard, Mouse, Gamepad 
+	
+	use the sprite class to draw sprites on to the screen
 
-Required: 	
-	Use the MouseWheel to enlarge and shrink the gridsize, 
-	Use the Middle Mouse button to place the grid origin at the current mouse location 
+	Draw a rectangle on screen to test DrawRectangle
+
 	
