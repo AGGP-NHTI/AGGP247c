@@ -1,0 +1,39 @@
+Playing Sounds in MonoGame
+
+You have two options 
+	1. SoundEffect 
+		* Short Sound Clips
+		* mostly wav's
+	2. Song
+		* Music 
+		* mostly mp3's 
+
+
+#1 Add Sound file via Content Pipeline
+	This is adding an existing file
+	Remember to save the Content File!
+	
+
+#2 Add the following using
+// For SoundEffect
+	using Microsoft.Xna.Framework.Audio; 
+// For Songs
+	using Microsoft.Xna.Framework.Media;
+
+#3 Create a variable
+// For SoundEffect
+	SoundEffect deathsoundEffect;
+// For Songs	
+	Song levelMusic;
+	
+#4 Load The Sound
+// For SoundEffect
+	deathsoundEffect = Content.Load<SoundEffect>("Wilhelm");	
+// For Songs
+	levelMusic = Content.Load<Song>("Polka");
+	
+#5 Play the Sound Effect or Music 
+// For Sound Effects
+	deathsoundEffect.Play();
+// For Songs
+	MediaPlayer.Play(levelMusic);
