@@ -1,0 +1,33 @@
+AGGP 294
+Lab 04
+
+Part I
+Create a Point that moves with the mouse position.
+This will be refered to as "the Point" in the next part of the labs.  
+
+Part II
+Draw a circle on Screen. 
+When the Point is inside the circle, draw the circle filled. 
+
+Part III 
+Draw a retangle on Screen. 
+When the Point is inside the retangle draw the retangle filled.
+
+Part IV 
+Draw a triangle on Screen
+When the Point is inside the triangle, draw the triangle filled. 
+
+You will have to create a method to determine if a point is in side a Triangle. 
+Reference: http://blackpawn.com/texts/pointinpoly/
+
+You will have to derive a method to draw the filled triangle. 
+
+
+Lab Notes: 
+How to Draw a filled object... 
+The a filled object will be two onjects. The first is the solid object, the second is the outline. Use a boolean that is set during update to indicate when to draw the solid object. Draw the solid object first, then the outline. If you do the opposite, you can get into situations the solid outline hides the outline 
+
+Drawing a Triangle
+Drawing a triangle is easy, use 3 lines. 
+To draw the fill of a trigangle will require you todraw each of the pixels inside the triangle. 
+Given that this lab doesn't have the triangle moving, you can create a list of pixels to draw.

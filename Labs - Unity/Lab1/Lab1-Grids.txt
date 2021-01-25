@@ -1,0 +1,91 @@
+AGGP 247
+Lab 2
+
+Work with the following Resolution:
+Standalone (1024x768)
+
+
+PART 1: 
+	Create a "Grid2D" Class
+	This class will be public
+
+	MEMBERS: 
+	Vector3 ScreenSize
+		holds the size screen information	
+		Initalize at Start 	
+	
+	vector3 Origin 
+		Screen location of the grid origin 
+
+	Float GridSize, 		 default 10f
+		This how many pixels on the screen from one point to the next. 
+		Your Grid will not be at the same size of your screen. 
+		This float will control the size of the grid
+
+	int DivisionCount, 			default 5
+		How many lines over should the
+ 		Division lines should be drawn
+		Starting from the Axis. 
+
+	
+	Line Color members:
+	Color AxisColor , 		Default White
+	Color LineColor , 		Default Dark Gray
+	Color DivisionColor, 		Default Yellow
+
+	Line Width Members:
+	Float AxisWidth, 		Default 3
+	Float DivisionWidth, 		Default 2
+	Float LineWidth, 		Default 1
+
+	Line Drawing Booleans:
+	bool isDrawingOrigin,  		Default false	
+	bool IsDrawingAxis, 		Default true
+	bool isDrawingDivisions, 	Default true
+	
+
+
+	METHODS
+	
+
+	public Vector3 GridToScreen(Vector3) 
+		Parm:   Vector3 in Grid Space
+		return: Vector3 in Screen Space 
+
+	public Vector3 ScreenToGrid(Vector3) 
+		Parm:   Vector3 in Screen Space
+		return: Vector3 in Grid Space 
+
+
+	public void DrawLine(Line)	
+		Line with positions in Grid Space
+
+
+Drawing Lines Diagram: 
+	l||||l||||I||||l||||l
+
+	Lines on the X Axis
+	Division Count  = 5
+	I = X Axis Line 	(X == 0) 
+	l = Division Line 	(X%5 == 0) && (X != 0) 
+	| = Nomral Line		(All other Lines) 
+
+
+Part 2:	
+
+The Axis will be represented by a Square Diamond. The points of the Diamond will be at +/- .2 in Grid Space on the axis  
+
+Set the grid origin (0,0) to the center of the window. 
+
+MouseWheel: enlarge and shrink the gridsize variable 
+
+Control + Mouse Wheel: Enlarge or Shrink the Divison Count variable	
+
+Middle Mouse button: place the grid origin at the current mouse location 
+
+1: Toggle Draw Origin
+2: Toggle Draw Axis Line
+3: Toggle Draw Division Line
+
+Extra Credit:
+Add Keyboard Commands to control the Grid Origin, GridSize, DivisionCount

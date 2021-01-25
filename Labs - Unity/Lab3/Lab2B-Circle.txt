@@ -1,0 +1,68 @@
+AGGP 247
+Lab 2B
+
+
+* Add to DrawingTools:
+
+public static float ToAngle(float radian) 
+converts given radians into an angle value
+
+public static float ToRadian(float angle)
+converts given angle into a radian value
+
+public static Vector2 CircleRadiusPoint(Vector2 Origin, float angle, float radius) 
+this method finds a point on a circle given a radius and angle. 
+This will place the point relative to the origin Vector 2. 
+You will need to convert the given angle into a radian. 
+
+public static void DrawCircle(SpriteBatch spriteBatch, float width, Color color, Vector2 Position, float Radius, int Sides)
+Draws a Circle, 
+Center of the circle is Position
+If Sides < 3, make it something reasonable.
+        
+ 
+
+
+public static Vector2 EllipseRadiusPoint(Vector2 Origin, float angle, Vector2 Axis) 
+Like CircleRadiusPoint, but scaling using the Axis Vector2 instead of the radius. 
+
+public static void DrawEllipse(SpriteBatch spriteBatch, float width, Color color, Vector2 Position, Vector2 Axis, int Sides)
+Draws an Ellipse, 
+Center of the Ellipse is Position
+If Sides < 3, make it something reasonable.
+
+
+* Create a Circle Class
+	The purpose of this class is to collect all of the information to draw a circle. 
+
+Implements:
+public void Draw(SpriteBatch spriteBatch)
+public void DrawOnGrid(SpriteBatch spriteBatch, Grid2D grid)
+
+
+* Create an Ellipse Class
+The purpose of this class is to collect all of the information 
+Create Constructors & Draw Methods
+
+Implements:
+public void Draw(SpriteBatch spriteBatch)
+public void DrawOnGrid(SpriteBatch spriteBatch, Grid2D grid)
+
+	
+
+Extra Credit:
+* Add to DrawingTools:
+public static LineObject GenerateCircle(float width, Color color, float Radius, int Sides)
+Generates a Line Object of a Circle
+Local Center of the circle is 0,0
+If Sides < 3, make it something reasonable.     
+   
+public static LineObject GenerateEllipse(float width, Color color, Vector2 Axis, int Sides)
+Generates a Line Object of a Ellipse, 
+Local Center of the circle is 0,0.
+If Sides < 3, make it something reasonable. 
+Axis Refers to the minor and major axis of the Ellipse for the X and Y Axis. 
+
+Implement in LineObject:
+public void DrawOnGrid(SpriteBatch spriteBatch, Grid2D grid)
+
