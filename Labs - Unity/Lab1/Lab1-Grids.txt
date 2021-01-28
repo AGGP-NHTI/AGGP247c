@@ -27,20 +27,26 @@ PART 1:
 	vector3 Origin 
 		Screen location of the grid origin 
 
-	Float GridSize, 		 default 10f
+	float GridSize, 		 default 10f
+	float MinGridSize, 		 default 2f
+
 		This how many pixels on the screen from one point to the next. 
 		Your Grid will not be at the same size of your screen. 
 		This float will control the size of the grid
 
 	int DivisionCount, 			default 5
+	int MinDivisionCount			default 2
 		How many lines over should the
  		Division lines should be drawn
 		Starting from the Axis. 
 
+	float OriginSize 			Default .6f
+		Controls size of origin point in relation to Grid Size
+
 	
 	Line Color members:
 	Color AxisColor , 		Default White
-	Color LineColor , 		Default Dark Gray
+	Color LineColor , 		Default Gray
 	Color DivisionColor, 		Default Yellow
 
 	Line Width Members:
