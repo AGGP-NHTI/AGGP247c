@@ -1,8 +1,18 @@
 AGGP 247
-Lab 2
+Lab 1
 
 Work with the following Resolution:
 Standalone (1024x768)
+
+
+Drawing Lines Diagram: 
+	l||||l||||I||||l||||l
+
+	Lines on the X Axis
+	Division Count  = 5
+	I = X Axis Line 	(X == 0) 
+	l = Division Line 	(X%5 == 0) && (X != 0) 
+	| = Nomral Line		(All other Lines) 
 
 
 PART 1: 
@@ -59,33 +69,34 @@ PART 1:
 
 	public void DrawLine(Line)	
 		Line with positions in Grid Space
+		Add this method this week with stub code. 
+		We will revisit it in a future lab. 
 
 
-Drawing Lines Diagram: 
-	l||||l||||I||||l||||l
 
-	Lines on the X Axis
-	Division Count  = 5
-	I = X Axis Line 	(X == 0) 
-	l = Division Line 	(X%5 == 0) && (X != 0) 
-	| = Nomral Line		(All other Lines) 
 
 
 Part 2:	
-
 The Axis will be represented by a Square Diamond. The points of the Diamond will be at +/- .2 in Grid Space on the axis  
 
 Set the grid origin (0,0) to the center of the window. 
 
-MouseWheel: enlarge and shrink the gridsize variable 
+Part 3: User Interface
 
-Control + Mouse Wheel: Enlarge or Shrink the Divison Count variable	
 
-Middle Mouse button: place the grid origin at the current mouse location 
+MouseWheel: 
+	enlarge and shrink the gridsize variable 
 
-1: Toggle Draw Origin
-2: Toggle Draw Axis Line
-3: Toggle Draw Division Line
+Control + Mouse Wheel: 
+	Enlarge or Shrink the Divison Count variable	
+
+Middle Mouse button: 
+	place the grid origin at the current mouse location 
+
+Number Keys: 
+	1: Toggle Draw Origin
+	2: Toggle Draw Axis Line
+	3: Toggle Draw Division Line
 
 Extra Credit:
 Add Keyboard Commands to control the Grid Origin, GridSize, DivisionCount
