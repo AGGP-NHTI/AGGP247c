@@ -1,5 +1,5 @@
 AGGP 247
-Lab 2B
+Lab 2
 
 
 * Add to DrawingTools:

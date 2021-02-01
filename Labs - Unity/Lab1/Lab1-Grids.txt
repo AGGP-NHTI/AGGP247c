@@ -79,7 +79,8 @@ PART 1:
 		We will revisit it in a future lab. 
 
 
-
+	public void DrawOrigin()
+		Draws the Origin Point (or Symbol) 
 
 
 Part 2:	

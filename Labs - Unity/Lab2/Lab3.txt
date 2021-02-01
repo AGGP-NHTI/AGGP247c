@@ -1,5 +1,5 @@
 AGGP 247
-Lab 3
+Lab 2
 
 Part 1: Building More Tools
 * Upgrade the drawing methods in Grid2D to take a boolean to indicate to draw in the grid space. 
