@@ -13,14 +13,21 @@ public struct Line : ICommandInstruction
 		this.color = color;
 	}
 
-    public void Draw()
+
+
+    /// <summary>
+    /// Draws the line instance, Is in screen space as default. Can pass a Grid2D to draw in the Grid Space.
+    /// </summary>
+    /// <param name="grid">Optional, Grid2D to draw relative to. (Start and End are in Grid Space when you do)</param>
+    public void Draw(Grid2d grid = null)
     {
+        if (grid != null)
+        { 
+            grid.DrawLine(this);
+            return; 
+        }
 
-    }
-
-    public void Draw(Vector3 location)
-    {
-
+        Glint.AddCommand(this);
     }
 
     public GLCommand ToCommand()
