@@ -28,14 +28,18 @@ public class DrawingObject : MonoBehaviour
             Draw(); 
         }
     }
-    public virtual void Draw()
+
+    /// <summary>
+    /// Draws the Drawing Object Instance
+    /// </summary>
+    /// <param name="grid">Optional, When a Grid2d is applied, object is drawn relative to the grid and location is in Grid space</param>
+    public virtual void Draw(Grid2d grid = null)
     {
         if (Lines.Count != 0)
         {
             for (int i = 0; i < Lines.Count; i++)
             {
-                Lines[i].Draw(Location);
+                Lines[i].Draw(grid);            }
             }
-        }
     }
 }
