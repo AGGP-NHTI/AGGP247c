@@ -10,12 +10,12 @@ converts given radians into an angle value
 public static float ToRadian(float angle)
 converts given angle into a radian value
 
-public static Vector2 CircleRadiusPoint(Vector2 Origin, float angle, float radius) 
+public static Vector2 CircleRadiusPoint(Vector3 Origin, float angle, float radius) 
 this method finds a point on a circle given a radius and angle. 
 This will place the point relative to the origin Vector 2. 
 You will need to convert the given angle into a radian. 
 
-public static void DrawCircle(SpriteBatch spriteBatch, float width, Color color, Vector2 Position, float Radius, int Sides)
+public static void DrawCircle(Vector3 Position, float Radius, int Sides, Color color)
 Draws a Circle, 
 Center of the circle is Position
 If Sides < 3, make it something reasonable.
@@ -23,10 +23,10 @@ If Sides < 3, make it something reasonable.
  
 
 
-public static Vector2 EllipseRadiusPoint(Vector2 Origin, float angle, Vector2 Axis) 
+public static Vector2 EllipseRadiusPoint(Vector3 Origin, float angle, Vector2 Axis) 
 Like CircleRadiusPoint, but scaling using the Axis Vector2 instead of the radius. 
 
-public static void DrawEllipse(SpriteBatch spriteBatch, float width, Color color, Vector2 Position, Vector2 Axis, int Sides)
+public static void DrawEllipse(Vector2 Position, Vector2 Axis, int Sides, Color color)
 Draws an Ellipse, 
 Center of the Ellipse is Position
 If Sides < 3, make it something reasonable.
@@ -48,19 +48,17 @@ Create Constructors & Draw Methods
 
 * Create a Circle Class
 	This will Inherit from your Ellipse class. 
-Create Constructors, but Leverage the Draw method 
-
 
 	
 
 Extra Credit:
 
-public static LineObject GenerateCircle(float width, Color color, float Radius, int Sides)
+public static DrawingObject GenerateCircle(float Radius, int Sides, Color color)
 Generates a Line Object of a Circle
 Local Center of the circle is 0,0
 If Sides < 3, make it something reasonable.     
    
-public static LineObject GenerateEllipse(float width, Color color, Vector2 Axis, int Sides)
+public static DrawingObject GenerateEllipse(Vector2 Axis, int Sides, Color color)
 Generates a Line Object of a Ellipse, 
 Local Center of the circle is 0,0.
 If Sides < 3, make it something reasonable. 
