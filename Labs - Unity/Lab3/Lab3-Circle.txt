@@ -10,9 +10,9 @@ converts given radians into an angle value
 public static float ToRadian(float angle)
 converts given angle into a radian value
 
-public static Vector2 CircleRadiusPoint(Vector3 Origin, float angle, float radius) 
+public static Vector3 CircleRadiusPoint(Vector3 Origin, float angle, float radius) 
 this method finds a point on a circle given a radius and angle. 
-This will place the point relative to the origin Vector 2. 
+This will place the point relative to the origin Vector 3. 
 You will need to convert the given angle into a radian. 
 
 public static void DrawCircle(Vector3 Position, float Radius, int Sides, Color color)
@@ -20,13 +20,14 @@ Draws a Circle,
 Center of the circle is Position
 If Sides < 3, make it something reasonable.
         
- 
+Extra Credit: 
+	Implement a version of DrawCircle using LineStrip
 
 
-public static Vector2 EllipseRadiusPoint(Vector3 Origin, float angle, Vector2 Axis) 
+public static Vector3 EllipseRadiusPoint(Vector3 Origin, float angle, Vector3 Axis) 
 Like CircleRadiusPoint, but scaling using the Axis Vector2 instead of the radius. 
 
-public static void DrawEllipse(Vector2 Position, Vector2 Axis, int Sides, Color color)
+public static void DrawEllipse(Vector3 Position, Vector2 Axis, int Sides, Color color)
 Draws an Ellipse, 
 Center of the Ellipse is Position
 If Sides < 3, make it something reasonable.
@@ -36,31 +37,42 @@ If Sides < 3, make it something reasonable.
 * Create an Ellipse Class
 The purpose of this class is to collect all of the information for an Ellipse in an stucture. 
 Use the following public members
-   	public Vector2 Position = Vector2.Zero;	
-	public Vector2 Center = Vector2.Zero;
-        public Vector2 Axis = Vector2.One;
+   	public Vector3 Position = Vector2.Zero;	
+	public Vector3 Center = Vector2.Zero;
+        public Vector3 Axis = Vector2.One;
         public float Roation = 0;
         public int Sides = 32;
         public float Width = 2.0f;
         public Color color = Color.White;
 
 Create Constructors & Draw Methods
+	* Overload your Draw Method to draw with a Grid2d
 
 * Create a Circle Class
 	This will Inherit from your Ellipse class. 
 
-	
+* Add two new draw groups (tab key controls drawing groups)
+	* Circle Tests
+		Test both the static draw function and the circle class
+		Test On and off Grid Drawing
+		Only one Circle can be at 0,0 on the grid. 
+	* Elipse Tests	
+		Test both the static draw function and the Elipse class
+		Test On and off Grid Drawing
+		Only one Elipse can be at 0,0 on the grid. 
 
 Extra Credit:
 
 public static DrawingObject GenerateCircle(float Radius, int Sides, Color color)
 Generates a Line Object of a Circle
 Local Center of the circle is 0,0
-If Sides < 3, make it something reasonable.     
+If Sides < 3, make it something reasonable.  
+Test this in your Circle Test Group
    
 public static DrawingObject GenerateEllipse(Vector2 Axis, int Sides, Color color)
 Generates a Line Object of a Ellipse, 
 Local Center of the circle is 0,0.
 If Sides < 3, make it something reasonable. 
-Axis Refers to the minor and major axis of the Ellipse for the X and Y Axis. 
+Axis Refers to the minor and major axis of the Ellipse for the X and Y Axis.
+Test this in your Elipse Test Group 
 
