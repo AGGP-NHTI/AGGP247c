@@ -1,6 +1,13 @@
 AGGP 294
 Lab 04
 
+Create a new Scene
+	Add a Grid
+	Add a new Script "CollisionExample"
+		This new script will run the application 
+
+Note: It is okay to change the color of the object to indicate the point is inside it. 
+
 Part I
 Create a Point that moves with the mouse position.
 This will be refered to as "the Point" in the next part of the labs.  
@@ -17,16 +24,13 @@ Part IV
 Draw a triangle on Screen
 When the Point is inside the triangle, draw the triangle filled. 
 
+Requirement: 
+The objects in 2,3,4 do not overlap each other. 
+
 You will have to create a method to determine if a point is in side a Triangle. 
 Reference: http://blackpawn.com/texts/pointinpoly/
 
 You will have to derive a method to draw the filled triangle. 
-
-
-Extra Credit:
-Draw Triangle, Square, Circle using Glint's Triangle\Triangle Strip functionality. 
-
-Add this lab as a another drawing group in Lab 2\3. 
 
 
 Lab Notes: 
