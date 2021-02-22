@@ -4,11 +4,11 @@ Lab 3
 
 * Add to DrawingTools:
 
-public static float ToAngle(float radian) 
-converts given radians into an angle value
+public static float ToDegrees(float radian) 
+converts given angle in radians into degree value
 
-public static float ToRadian(float angle)
-converts given angle into a radian value
+public static float ToRadians(float degree)
+converts given angle in degrees into radian value
 
 public static Vector3 CircleRadiusPoint(Vector3 Origin, float angle, float radius) 
 this method finds a point on a circle given a radius and angle. 

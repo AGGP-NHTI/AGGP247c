@@ -1,0 +1,23 @@
+Transform 
+	Position
+	Rotation
+	Scale
+
+Square: Local Verticies 
+(1, 1, 0) (1, -1, 0) (-1, -1, 0) (-1, 1, 0)
+
+Local Data to World Data 
+#1 World Data of Transform (if Child of a child... ect) 
+#2 Scale the Object 
+#3 Rotate the Object 
+	2D: rotate the points based on the single angle variable 
+	3D: Yaw (Z), Pitch (X), Roll (Y)
+		Linear Math allows you combine all 3 rotations into 1 rotation 
+#4 Translate (aka Place it in the world)
+
+Eg. 
+No rotation, Scale of 1 (no Scale)
+Position at (3,3,0)
+
+world position of verts:
+(4, 4, 0) (4, 2, 0) (2, 2, 0) (2, 4, 0)
