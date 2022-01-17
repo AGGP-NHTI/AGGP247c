@@ -43,3 +43,41 @@ Gravity of Earth (at Sea level) :
 Gravity of Moon (at surface) : 
 	~1.62 m/s²
 
+Lab Requirements: 
+You will be creating two scenes for this lab. 
+
+Extra Credit
+Either 
+A) Create both in one scene with ability to switch back and forth between the two
+B) Add an interface to switch between both scenes. 
+
+Scene 1: 
+SPACESHIP!!!!!!!!!!!
+https://www.youtube.com/watch?v=7TYJyCCO8Dc
+
+Create a simple spaceship. 
+
+Use A\D to rotate the ship
+W to Thrust Forward
+
+W will add a force (an acceleration) to the ship based on the direction it is currently headed. You will need to store the current velocity of the ship and change the position of the ship based on this value. 
+
+The Spaceship should not move faster than a stated value. Use a float to store this information. 
+
+The Spaceship should warp from one side to the other if it goes off screen. 
+
+Scene 2: 
+Simple Cannon simulation
+
+Draw a simple cannon or tank on screen. 
+Draw a line for the ground. 
+
+W\S to increase\decrease the Cannon's power 
+A\D to rotate the cannon 
+Space to Fire the Cannon
+
+When you fire, create a "cannon ball" object (a circle is fine!).
+It should move in a parabola with gravity slowing it's vertical movment at the top and pulling it down on the other side. 
+
+When the cannon ball reaches the ground, stop it and pace it on the ground.  
+
