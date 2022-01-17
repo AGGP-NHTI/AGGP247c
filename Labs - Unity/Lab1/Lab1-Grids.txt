@@ -25,14 +25,17 @@ PART 1:
 		Initalize at Start 	
 	
 	vector3 Origin 
-		Screen location of the grid origin 
+		Screen location of the grid origin
+		Default to center of the Screen 
+		(hint: divide the Screen Size by 2) 
 
 	float GridSize, 		 default 10f
-	float MinGridSize, 		 default 2f
-
+		This float will control the size of the grid
 		This how many pixels on the screen from one point to the next. 
 		Your Grid will not be at the same size of your screen. 
-		This float will control the size of the grid
+	
+	float MinGridSize, 		 default 2f
+		This float controls how small the GridSizeVarible can go. 	
 
 	int DivisionCount, 			default 5
 	int MinDivisionCount			default 2
