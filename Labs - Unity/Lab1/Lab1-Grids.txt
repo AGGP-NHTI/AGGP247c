@@ -52,11 +52,6 @@ PART 1:
 	Color LineColor , 		Default Gray
 	Color DivisionColor, 		Default Yellow
 
-	Line Width Members:
-	Float AxisWidth, 		Default 3
-	Float DivisionWidth, 		Default 2
-	Float LineWidth, 		Default 1
-
 	Line Drawing Booleans:
 	bool isDrawingOrigin,  		Default false	
 	bool IsDrawingAxis, 		Default true
